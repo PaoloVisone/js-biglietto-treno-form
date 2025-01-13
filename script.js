@@ -12,41 +12,46 @@ console.log(age);
 
 
 // Prezzo del biglietto
-const price = 0.21;
+let price = 0.21;
 
 // Sconto minorenni
-const minDiscount = 20;
+let minDiscount = 20;
 
 // Sconto maggiorenni
-const maxDiscount = 40;
+let maxDiscount = 40;
 
 // Funzione per calcolare il prezzo del biglietto
 
 button.addEventListener('click', () => {
     // Recupero del valore Km
-    let kilometers = distance.value.trim();
+    const kilometers = distance.value.trim();
     console.log(kilometers);
 
     // Recupero del valore età
-    let old = age.value.trim();
+    const old = age.value.trim();
     console.log(old);
 
     // Calcolo prezzo x chilometri
-    let sum = price * kilometers
+    const sum = price * kilometers
 
     // Calcolo somma x lo sconto 'minori'
-    let firstDiscount = sum * minDiscount / 100;
+    const firstDiscount = sum * minDiscount / 100;
     console.log(firstDiscount);
 
     // Calcolo somma x lo sconto 'over 65'
-    let secondDiscount = sum * maxDiscount / 100;
+    const secondDiscount = sum * maxDiscount / 100;
+
+    // Calcolo dello sconto 'minori'
+    const finalFirstDiscount = sum - firstDiscount
+
+    // Calcolo dello sconto 'over 65'
+    const finalSecondDiscount = sum - secondDiscount
 
     // If statement per calcolare il prezzo finale 
-
     if (old < 18) {
-        console.log(sum - firstDiscount);
+        console.log(finalFirstDiscount);
     } else if (old > 65) {
-        console.log(sum - secondDiscount);
+        console.log(finalSecondDiscount);
     } else {
         console.log(sum);
     }
