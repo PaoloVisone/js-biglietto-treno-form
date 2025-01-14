@@ -11,43 +11,64 @@
 
     <!-- INSERIMENTO DATI UTENTE -->
 
-    <!-- INPUT 'NOME E COGNOME' -->
+    <!-- FORM -->
 
-    <input id="nome-cognome" placeholder="inserisci Nome e Cognome">
-
-    <!-- INPUT 'Km DA PERCORRERE' -->
-
-    <input id="distanza" placeholder="inserisci i Km">
-
-    <!-- INPUT "ETA' DEL PASSEGERO" -->
-
-    <input id="eta" placeholder="inserisci la tua età">
+    </form>
+    <form id="main-form">
+        <div>
+            <label for="name">Nome e Cognome</label>
+            <!-- INPUT 'NOME E COGNOME' -->
+            <input type="text" id="nome-cognome" placeholder="inserisci Nome e Cognome" required>
+        </div>
+        <div>
+            <label for="chilometri">Chilometri</label>
+            <!-- INPUT 'Km DA PERCORRERE' -->
+            <input type="number" id="distanza" placeholder="inserisci i Km" required>
+        </div>
+        <div>
+            <label for="eta">Età</label>
+            <!-- INPUT "ETA' DEL PASSEGERO" -->
+            <input type="number" id="eta" placeholder="inserisci la tua età" required>
+        </div>
+        <div>
+            <label for="destinazione">Destinazione</label>
+            <!-- INPUT "ETA' DEL PASSEGERO" -->
+            <select name="città" id="citta">
+                <option value=""> - Scegli una destinazione - </option>
+                <option value="Napoli">Napoli</option>
+                <option value="Milano">Milano</option>
+                <option value="Roma">Roma</option>
+                <option value="Bologna">Bologna</option>
+                <option value="Torino">Torino</option>
+                <option value="Bari">Bari</option>
+            </select>
+        </div>
+    </form>
 
     <!-- BOTTONE 'GENERA' -->
 
-    <button type="submit" id="btn">Genera</button>
+    <button id="genera">Genera</button>
 
+    <!-- STAMPA DATI UTENTE (BIGLIETTO) -->
 
-    <!-- STAMPA DATI UTENTE (BIGLIETTO)-->
+    <!-- BIGLIETTO -->
 
     <table>
-        <caption>DETTAGLIO PASSEGGERO</caption>
-
         <thead>
             <tr>
-                <th scope="col">NOME DEL PASSEGERO</th>
-                <th scope="col">OFFERTA</th>
-                <th scope="col">CARROZZA</th>
-                <th scope="col">CODICE</th>
-                <th scope="col">COSTO BIGIETTO</th>
+                <th>Nome e Cognome</th>
+                <th>Offerta</th>
+                <th>Destinazione</th>
+                <th>Posto a sedere</th>
+                <th>Costo</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <th id="nome" scope="row"></th>
-                <td id="offeta"></td>
-                <td id="carrozza"></td>
-                <td id="codice"></td>
+                <td id="nome"></td>
+                <td id="offerta"></td>
+                <td id="destinazione"></td>
+                <td id="posto"></td>
                 <td id="prezzo"></td>
             </tr>
         </tbody>

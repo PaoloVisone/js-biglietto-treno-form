@@ -1,21 +1,19 @@
 // Selezione degli elementi in html (input)
 
-
 const distance = document.getElementById('distanza');
 const age = document.getElementById('eta');
-const button = document.getElementById('btn');
+const button = document.getElementById('genera');
 const nameSurname = document.getElementById('nome-cognome');
-
-console.log(button);
-console.log(distance);
-console.log(age);
+const form = document.getElementById('main-form');
+const city = document.getElementById('citta');
 
 // Selezione degli elementi in html (output)
 
 const name = document.getElementById('nome');
 const offer = document.getElementById('offerta');
-const wagon = document.getElementById('carrozza');
-const price = document.getElementById('prezzo')
+const destination = document.getElementById('destinazione');
+const seat = document.getElementById('posto');
+const price = document.getElementById('prezzo');
 
 // Calcolo del biglietto 
 
@@ -51,18 +49,29 @@ button.addEventListener('click', () => {
     const secondDiscount = sum * maxDiscount / 100;
 
     // Calcolo dello sconto 'minori'
-    const finalFirstDiscount = sum - firstDiscount
+    const finalFirstDiscount = sum - firstDiscount;
 
     // Calcolo dello sconto 'over 65'
-    const finalSecondDiscount = sum - secondDiscount
+    const finalSecondDiscount = sum - secondDiscount;
 
     // If statement per calcolare il prezzo finale 
     if (old < 18) {
         price.innerHTML = finalFirstDiscount.toFixed(2) + " " + "€";
+        offer.innerHTML = `Sconto Minorenni`;
     } else if (old > 65) {
         price.innerHTML = finalSecondDiscount.toFixed(2) + " " + "€";
+        offer.innerHTML = `Sconto Maggiorenne`;
     } else {
         price.innerHTML = sum.toFixed(2) + " " + "€";
+        offer.innerHTML = `Prezzo Standard`;
     }
-});
 
+    // Creo un numero Random
+    const numRandom = Math.round(Math.random() * 100 + 1);
+
+    // Aggiungo i valori
+    destination.innerHTML = city.value;
+    name.innerHTML = nameSurname.value;
+    seat.innerHTML = numRandom;
+
+});
