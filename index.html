@@ -5,74 +5,85 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
     <!-- INSERIMENTO DATI UTENTE -->
 
+
+
     <!-- FORM -->
 
-    </form>
-    <form id="main-form">
-        <div>
-            <label for="name">Nome e Cognome</label>
-            <!-- INPUT 'NOME E COGNOME' -->
-            <input type="text" id="nome-cognome" placeholder="inserisci Nome e Cognome" required>
-        </div>
-        <div>
-            <label for="chilometri">Chilometri</label>
-            <!-- INPUT 'Km DA PERCORRERE' -->
-            <input type="number" id="distanza" placeholder="inserisci i Km" required>
-        </div>
-        <div>
-            <label for="eta">Età</label>
-            <!-- INPUT "ETA' DEL PASSEGERO" -->
-            <input type="number" id="eta" placeholder="inserisci la tua età" required>
-        </div>
-        <div>
-            <label for="destinazione">Destinazione</label>
-            <!-- INPUT "ETA' DEL PASSEGERO" -->
-            <select name="città" id="citta">
-                <option value=""> - Scegli una destinazione - </option>
-                <option value="Napoli">Napoli</option>
-                <option value="Milano">Milano</option>
-                <option value="Roma">Roma</option>
-                <option value="Bologna">Bologna</option>
-                <option value="Torino">Torino</option>
-                <option value="Bari">Bari</option>
-            </select>
-        </div>
-    </form>
+    <div class="content">
 
-    <!-- BOTTONE 'GENERA' -->
+        <h1>AQUISTA IL TUO BIGLIETTO</h1>
 
-    <button id="genera">Genera</button>
+
+        <form id="main-form">
+            <div>
+                <!-- <label for="name">Nome e Cognome</label> -->
+                <!-- INPUT 'NOME E COGNOME' -->
+                <input type="text" id="nome-cognome" placeholder="Nome e Cognome" required>
+            </div>
+            <div>
+                <!-- <label for="chilometri">Chilometri</label> -->
+                <!-- INPUT 'Km DA PERCORRERE' -->
+                <input type="number" id="distanza" placeholder="Distanza da percorrere" required>
+            </div>
+            <div>
+                <!-- <label for="eta">Età</label> -->
+                <!-- INPUT "ETA' DEL PASSEGERO" -->
+                <input type="number" id="eta" placeholder="Età" required>
+            </div>
+            <div>
+                <!-- <label for="destinazione">Destinazione</label> -->
+                <!-- INPUT "ETA' DEL PASSEGERO" -->
+                <select name="città" id="citta">
+                    <option value=""> - Scegli una destinazione - </option>
+                    <option value="Napoli">Napoli</option>
+                    <option value="Milano">Milano</option>
+                    <option value="Roma">Roma</option>
+                    <option value="Bologna">Bologna</option>
+                    <option value="Torino">Torino</option>
+                    <option value="Bari">Bari</option>
+                </select>
+            </div>
+
+            <!-- BOTTONE 'GENERA' -->
+            <div id="content-btn">
+                <button id="genera">Genera</button>
+            </div>
+
+        </form>
+
+    </div>
 
     <!-- STAMPA DATI UTENTE (BIGLIETTO) -->
 
     <!-- BIGLIETTO -->
 
-    <table>
-        <thead>
-            <tr>
-                <th>Nome e Cognome</th>
-                <th>Offerta</th>
-                <th>Destinazione</th>
-                <th>Posto a sedere</th>
-                <th>Costo</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td id="nome"></td>
-                <td id="offerta"></td>
-                <td id="destinazione"></td>
-                <td id="posto"></td>
-                <td id="prezzo"></td>
-            </tr>
-        </tbody>
-    </table>
+    <div class="content ticket">
+
+        <div id="info-name">
+            <span class="description">Nome e Cognome</span>
+            <span id="nome"></span>
+        </div>
+
+        <div class="info">
+            <span class="description">Offerta</span>
+            <span class="description">Destinazione</span>
+            <span class="description">Posto a sedere</span>
+            <span class="description">Costo</span>
+        </div>
+        <div class="info">
+            <span id="offerta"></span>
+            <span id="destinazione"></span>
+            <span id="posto"></span>
+            <span id="prezzo"></span>
+        </div>
+    </div>
 
     <!-- SCRIPT JS -->
     <script src="script.js"></script>

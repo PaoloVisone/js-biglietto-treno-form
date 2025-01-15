@@ -29,7 +29,8 @@ let maxDiscount = 40;
 
 // Funzione per calcolare il prezzo del biglietto
 
-button.addEventListener('click', () => {
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
     // Recupero del valore Km
     const kilometers = distance.value.trim();
     console.log(kilometers);

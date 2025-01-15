@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: ghostwhite;
+}
+
+.content {
+    width: 80%;
+    text-align: center;
+    margin: 20px auto;
+    padding: 10px;
+    font-size: 30px;
+
+}
+
+.ticket {
+    display: flex;
+}
+
+#content-btn {
+    text-align: center;
+}
+
+h1 {
+    padding: 20px;
+}
+
+form {
+    text-align: start;
+}
+
+input {
+    height: 30px;
+    font-size: 18px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+select {
+    height: 30px;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+#info-name {
+    padding: 10px;
+    font-size: 40px;
+}
+
+span {
+    display: block;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    font-size: 15px;
+    font-size: 30px;
+}
+
+.description {
+    font-weight: 800;
+    padding: 10px;
+}
+
+#genera {
+    padding: 10px;
+    background-color: black;
+    color: white;
+    margin: 20px;
+}
